@@ -1,0 +1,36 @@
+<%- include('layout/header') %>
+<div class="container">
+    <div class="row">
+      <div class="col-lg-3"></div>
+        <div class="col-lg-5 shadow p-3 mb-5 bg-white rounded">
+            <h1 class="bg-pf p-3 m-0 text-pink" >
+              Modifier Stagiaire
+            </h1>
+            <br>
+            <form action='/modifier/<%= stagiaire._id %>'  method='post' enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nom stagiaire</label>
+                  <input type="text" class="form-control" value="<%= stagiaire.nom %>" id="exampleInputEmail1" name="nom" placeholder="Enter le nom de stagiare">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Prenom stagiaire</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1"  value="<%= stagiaire.prenom %>" name="prenom" placeholder="Enter le prenom de stagaire">
+                </div>
+                <div class="mb-3">
+                  <label for="formFile" class="form-label">Photo de stagiaire</label>
+                  <input class="form-control" type="file" id="formFile" name="image">
+                  <img src="/<%= stagiaire.image %>" width="100" height="100" alt="">
+                </div>
+                <div class="text-center">
+                  <input type="hidden" name="oldImage" value=" <%= stagiaire.image %> ">
+                  <button type="submit" class="btn btn-sub btn-lg">Modifier</button>
+                </div>
+            </form>
+        </div>
+      <div class="col-lg-3"></div>
+
+    </div>
+</div>
+
+
+<%- include('layout/footer') %>

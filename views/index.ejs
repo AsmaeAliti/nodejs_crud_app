@@ -1,0 +1,48 @@
+<%- include('layout/header') %>
+<div class="container">
+    <div class="row">
+      <% if (message) { %>
+      <div class=" col-12 alert alert-<%= message.type %> " role="alert">
+        <%= message.message %>
+      </div>
+      <% } %>
+        <div class="col-lg-12">
+            <h1>Tout les stagaires</h1>
+            <div class="table-responsive">
+              <% if(stagiaires != ""){ %>
+                <table class="table table-strinped">
+                  <thead class="bg-pf">
+                      <tr>
+                          <th>ID</th>
+                          <th>Nom</th>
+                          <th>Prenom</th>
+                          <th>Image</th>
+                          <th>Action</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <% stagiaires.forEach((row, index) => {%>
+                      <tr>
+                          <td><%= row._id %></td>
+                          <td><%= row.nom %></td>
+                          <td><%= row.prenom %></td>
+                          <td><img src="<%= row.image %> " width="50px" height="50px" class="" alt=""></td>
+                          <td>
+                              <a href="/modifier-stagiaire/<%= row._id %>" class="text-success"><img width="40" height="40" src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-edit-interface-kiranshastry-lineal-color-kiranshastry.png" alt="external-edit-interface-kiranshastry-lineal-color-kiranshastry"/></a>
+                              <a href="/supprimer/<%= row._id %>" class="text-success"><img width="40" height="40" src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/external-delete-multimedia-kiranshastry-lineal-color-kiranshastry.png" alt="external-delete-multimedia-kiranshastry-lineal-color-kiranshastry"/></a>
+
+                          </td>
+                      </tr>
+                      <% }); %>
+                  </tbody>
+                </table>
+                <% }else{ %>
+                  <h1 class="text-center text-secondary mt-5">la base de donne est null</h1>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include('layout/footer') %>

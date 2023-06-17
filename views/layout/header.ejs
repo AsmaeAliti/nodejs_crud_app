@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://cdn.datatables.net/v/bs5/dt-1.13.4/datatables.min.css" rel="stylesheet"/>
+  <title>
+    <% title %>
+  </title>
+  <style>
+    .bg-bf {
+      background-color:hotpink !important;
+    }
+    .bg-pf {
+      background-color:rgb(255, 223, 239) !important;
+    }
+    .btn-sub {
+      color: #fff;
+      background-color: #03dbbe;
+      border-color: #03dbbe;
+    }
+
+    .btn-sub:hover {
+      color: #fff;
+      background-color: #00EFD1;
+      border-color: #00EFD1;
+    }
+
+    .btn-sub:focus, .btn-sub.focus {
+      color: #fff;
+      background-color: #03dbbe;
+      border-color: #03dbbe;
+      box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+    }
+    .text-pink{
+      color: rgb(247, 144, 195);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-bf">
+    <div class="container">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">tout les stagaires <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/add">Ajouter Stagiare</a>
+          </li>
+
+        </ul>
+      
+        <form action="/search"  method="get" class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" name="recherche"  type="text" placeholder="Rechercher par nom ou prénom" aria-label="Search">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Rechercher</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>

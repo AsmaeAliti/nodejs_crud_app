@@ -1,0 +1,35 @@
+<%- include('layout/header') %>
+<div class="container">
+    <div class="row">
+      <div class="col-lg-3"></div>
+        <div class="col-lg-5 shadow p-3 mb-5 bg-white rounded">
+            <h1 class="bg-pf p-3 m-0 text-pink" >
+              <img width="45" height="45" src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/external-user-interface-kiranshastry-lineal-color-kiranshastry-1.png" alt="external-user-interface-kiranshastry-lineal-color-kiranshastry-1"/>
+              Ajouter stagiaire
+            </h1>
+            <br>
+            <form action='/add'  method='post' enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nom stagiaire</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="nom" placeholder="Enter le nom de stagiare">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Prenom stagiaire</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="prenom" placeholder="Enter le prenom de stagaire">
+                </div>
+                <div class="mb-3">
+                  <label for="formFile" class="form-label">Photo de stagiaire</label>
+                  <input class="form-control" type="file" id="formFile" name="image">
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-sub btn-lg">Ajouter</button>
+                </div>
+            </form>
+        </div>
+      <div class="col-lg-3"></div>
+
+    </div>
+</div>
+
+
+<%- include('layout/footer') %>
